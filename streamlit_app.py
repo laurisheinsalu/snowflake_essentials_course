@@ -47,7 +47,7 @@ streamlit.dataframe(my_data_row)
 fruit_choice2 = streamlit.text_input('Insert fruit: ')
 streamlit.write('The user entered ', fruit_choice2)
 my_data_row.append(fruit_choice2)
-streamlit.text(my_data_row)
+streamlit.dataframe(my_data_row)
 # fruityvice_response2 = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice2)
 # fruityvice_normalized2 = pandas.json_normalize(fruityvice_response2.json())
 # write your own comment - what does this do?
