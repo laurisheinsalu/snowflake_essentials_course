@@ -43,3 +43,10 @@ my_cur.execute("select * from pc_rivery_db.public.fruit_load_list;")
 my_data_row = my_cur.fetchall()
 streamlit.header("Fruit list contains: ")
 streamlit.dataframe(my_data_row)
+
+fruit_choice2 = streamlit.text_input('Insert fruit: ')
+streamlit.write('The user entered ', fruit_choice2)
+fruityvice_response2 = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+fruityvice_normalized2 = pandas.json_normalize(fruityvice_response.json())
+# write your own comment - what does this do?
+streamlit2.dataframe(fruityvice_normalized)
