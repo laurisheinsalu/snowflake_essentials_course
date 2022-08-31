@@ -45,13 +45,5 @@ streamlit.header("Fruit list contains: ")
 streamlit.dataframe(my_data_row)
 
 fruit_choice2 = streamlit.text_input('Add fruit to list: ')
-my_cur2 =my_cnx.cursor()
-my_cur2.execute("select " + fruit_choice2)
-new_data_row = my_cur2.fetchall()
-my_data_row = my_data_row.append(new_data_row)
-# my_data_row.append( "(" + fruit_choice2 + ")")
-# streamlit.dataframe(my_data_row)
-# fruityvice_response2 = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice2)
-# fruityvice_normalized2 = pandas.json_normalize(fruityvice_response2.json())
-# write your own comment - what does this do?
-# streamlit.dataframe(fruityvice_normalized2)
+streamlit.write("Thanks for adding " + fruit_choice2 "to list :)"). 
+my_cur.execute("Insert into fruit_load_list values(" + fruit_choice2 + " from streamlit)")
